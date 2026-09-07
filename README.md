@@ -25,6 +25,20 @@ macOS'ning o'rnatilgan diktovkasi kabi, lekin **o'zbek tili uchun maxsus**, **bu
 
 ## 🚀 O'rnatish / Install
 
+### Variant 1 — Tayyor paket (tavsiya etiladi, dasturchi bo'lish shart emas)
+
+| Kompyuter | Yuklab olish | Nima qilinadi |
+|---|---|---|
+| **macOS** (Apple Silicon) | [**RubaiSTT-Mac.zip**](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.0/RubaiSTT-Mac.zip) | Zipni oching → `ORNATISH.command` ni ikki marta bosing. Qolganini o'zi qiladi. |
+| **Windows** 10/11 (64-bit) | [**RubaiSTT-Windows.zip**](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.0/RubaiSTT-Windows.zip) | Zipni oching → `YUKLASH.bat` ni ikki marta bosing → `OQING.txt` dagi 4 qadam. |
+
+Har ikkala paket ichida **OQING.txt** bor — o'zbekcha, qadamma-qadam.
+Model (823 MB) o'rnatuvchi tomonidan avtomatik yuklanadi, qo'lda hech narsa qilinmaydi.
+
+> Model faylini alohida olish: [`ggml-rubaistt.bin`](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.0/ggml-rubaistt.bin) (823 MB)
+
+### Variant 2 — Manbadan build qilish (macOS)
+
 ```bash
 git clone https://github.com/Komiljon006/uzbek-dictation.git
 cd uzbek-dictation
