@@ -8,7 +8,7 @@ MODELDIR="$HOME/rubai-stt/models"
 MODEL="$MODELDIR/ggml-rubaistt.bin"       # q8_0 (yengil ~820MB) — ilova shu nomdan o'qiydi
 MODEL_F16="$MODELDIR/ggml-rubaistt-f16.bin"
 # Tayyor q8_0 ggml model (GitHub Release). Bo'sh bo'lsa — HF'dan konversiya + quant qilinadi.
-MODEL_URL="https://github.com/MuhammadMirrr/uzbek-dictation/releases/download/v1.0/ggml-rubaistt.bin"
+MODEL_URL="https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.0/ggml-rubaistt.bin"
 
 echo "==> RubaiSTT Dictation o'rnatilmoqda"
 
