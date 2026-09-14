@@ -1,4 +1,4 @@
-# 🎙️ RubaiSTT Dictation — O'zbekcha ovozli yozuv (macOS)
+# 🎙️ RubaiSTT Dictation — O'zbekcha ovozli yozuv (macOS · Windows)
 
 Istalgan ilovada (Telegram, Messages, brauzer, hujjat — qayerda kursor bo'lsa) **⌃⌥D** bosib o'zbekcha gapiring — matn avtomatik o'sha joyga lotin alifbosida yoziladi.
 
@@ -30,12 +30,21 @@ macOS'ning o'rnatilgan diktovkasi kabi, lekin **o'zbek tili uchun maxsus**, **bu
 | Kompyuter | Yuklab olish | Nima qilinadi |
 |---|---|---|
 | **macOS** (Apple Silicon) | [**RubaiSTT-Mac.zip**](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.0/RubaiSTT-Mac.zip) | Zipni oching → `ORNATISH.command` ni ikki marta bosing. Qolganini o'zi qiladi. |
-| **Windows** 10/11 (64-bit) | [**RubaiSTT-Windows.zip**](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.0/RubaiSTT-Windows.zip) | Zipni oching → `YUKLASH.bat` ni ikki marta bosing → `OQING.txt` dagi 4 qadam. |
+| **Windows** 10/11 (64-bit) | [**RubaiSTT-Windows.zip**](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.1/RubaiSTT-Windows.zip) | Zipni oching → `ORNATISH.bat` ni ikki marta bosing. **Bitta qadam** — Python, whisper, model va yorliqlarni o'zi o'rnatadi. Qo'llanma: [PDF](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.1/RubaiSTT_QOLLANMA_WINDOWS.pdf) |
 
 Har ikkala paket ichida **OQING.txt** bor — o'zbekcha, qadamma-qadam.
 Model (823 MB) o'rnatuvchi tomonidan avtomatik yuklanadi, qo'lda hech narsa qilinmaydi.
 
 > Model faylini alohida olish: [`ggml-rubaistt.bin`](https://github.com/Komiljon006/uzbek-dictation/releases/download/v1.0/ggml-rubaistt.bin) (823 MB)
+
+### Windows versiyasi (v1.1) — qanday ishlaydi
+
+`windows/` papkasi: `rubaistt.py` (tray ilova: **pynput** global hotkey Ctrl+Alt+D →
+**sounddevice** 16 kHz mono → **whisper-server.exe** (model xotirada, tez; bo'lmasa
+whisper-cli) → clipboard + Ctrl+V (`SendInput`)), `ornatish.ps1` (embeddable Python 3.12 +
+whisper.cpp v1.9.2 tayyor .exe + model — hammasi `%LOCALAPPDATA%\RubaiSTT` ga, admin shart
+emas, uzilsa davom etadi), `OCHIRISH.bat`. Mac bilan bir xil model va parametrlar
+(`-l uz`, beam 5, no timestamps).
 
 ### Variant 2 — Manbadan build qilish (macOS)
 

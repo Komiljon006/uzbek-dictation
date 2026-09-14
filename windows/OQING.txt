@@ -1,0 +1,34 @@
+RubaiSTT — o'zbekcha ovozli yozuv (Windows 10/11, 64-bit)
+==========================================================
+
+NIMA QILADI
+  Istalgan dasturda (Telegram, Word, Excel, brauzer, 1C, SAP...) Ctrl+Alt+D
+  bosasiz, o'zbekcha gapirasiz, yana Ctrl+Alt+D bosasiz — gapirganingiz kursor
+  turgan joyga lotin alifbosida yoziladi. Internet KERAK EMAS, ovoz kompyuterdan
+  chiqmaydi, to'lov/kalit yo'q. Mac versiyasi bilan bir xil model (rubaiSTT v2).
+
+O'RNATISH — 1 QADAM
+  ORNATISH.bat ni ikki marta bosing. Tamom.
+  (~850 MB yuklaydi: Python, whisper dvigateli, model. 5–30 daqiqa.
+   Uzilsa — yana bosing, qolganidan davom etadi. Admin huquqi shart emas.)
+  Windows "Noma'lum nashriyotchi" desa: "Batafsil" → "Baribir ishga tushirish".
+
+ISHLATISH
+  Soat yonidagi yashil mikrofon = tayyor.
+  Kursorni yozish joyiga qo'ying → Ctrl+Alt+D (qisqa "bip") → gapiring →
+  Ctrl+Alt+D (past "bip") → 2–6 soniyada matn chiqadi.
+  Belgi qizil = yozilmoqda, sariq = o'girilmoqda.
+  Mikrofonni almashtirish: belgi ustida o'ng tugma → Mikrofon.
+  Kompyuter yoqilganda o'zi ishga tushadi. O'chirish: OCHIRISH.bat.
+
+ISHLAMASA
+  1) Matn chiqmayapti, belgi bor:  Sozlamalar → Maxfiylik → Mikrofon →
+     "Ish stoli ilovalariga mikrofonga ruxsat" YOQIQ bo'lsin.
+  2) Belgi umuman chiqmadi: %LOCALAPPDATA%\RubaiSTT\log.txt ni oching — oxirgi
+     qatorda sabab yozilgan. Ko'pincha model to'liq yuklanmagan → ORNATISH.bat qayta.
+  3) Sekin (10 soniya gapga 15+ soniya): kompyuter kuchsiz. Qisqaroq gapiring
+     yoki NVIDIA videokartali kompyuterda ishlating.
+  4) 1C/SAP kabi eski dasturga qo'ymasa: matn clipboardda turadi — Ctrl+V bosing.
+
+TALAB
+  Windows 10/11 64-bit, 8 GB RAM (model 1,2 GB xotira oladi), 2 GB bo'sh joy, mikrofon.

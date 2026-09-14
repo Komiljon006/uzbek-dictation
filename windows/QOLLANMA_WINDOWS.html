@@ -1,0 +1,72 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><title>RubaiSTT — Windows qo'llanma</title>
+<style>
+@page{size:A4;margin:18mm 16mm}
+body{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:11.5pt;line-height:1.45;color:#1a1a1a;margin:0}
+h1{font-size:24pt;margin:0 0 4px;color:#b3261e}h2{font-size:15pt;margin:22px 0 8px;border-bottom:2px solid #b3261e;padding-bottom:3px}
+h3{font-size:12pt;margin:14px 0 4px}
+.lead{font-size:12.5pt;color:#333}
+.box{border:1px solid #ddd;border-left:5px solid #b3261e;padding:8px 12px;margin:10px 0;background:#fafafa}
+.ok{border-left-color:#2e7d32;background:#f3faf3}
+.warn{border-left-color:#f9a825;background:#fffbe8}
+code,kbd{font-family:Menlo,Consolas,monospace;font-size:10.5pt;background:#f1f1f1;padding:1px 4px;border-radius:3px}
+kbd{border:1px solid #bbb;background:#fff;padding:1px 6px;font-weight:600}
+table{border-collapse:collapse;width:100%;margin:8px 0}td,th{border:1px solid #ddd;padding:5px 8px;text-align:left;vertical-align:top}th{background:#f4f4f4}
+ol li,ul li{margin:4px 0}
+.step{display:flex;gap:10px;margin:8px 0}.num{background:#b3261e;color:#fff;border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;flex:none}
+.foot{margin-top:26px;font-size:9.5pt;color:#777;border-top:1px solid #ddd;padding-top:6px}
+</style></head><body>
+<h1>RubaiSTT — o'zbekcha ovozli yozuv</h1>
+<div class="lead">Windows 10/11 uchun qo'llanma · v1.1 · <b>Ctrl+Alt+D</b> bosing, gapiring, matn o'zi yoziladi</div>
+
+<h2>1. Bu nima</h2>
+<p>Istalgan dasturda — Telegram, Word, Excel, brauzer, 1C, SAP — yozish maydoniga kursorni qo'yasiz, <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd> bosasiz, o'zbekcha gapirasiz, yana <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd> bosasiz — gapirganingiz o'sha joyga <b>lotin alifbosida matn</b> bo'lib yoziladi.</p>
+<div class="box ok"><b>Internet kerak emas.</b> Hammasi kompyuterning o'zida ishlaydi, ovoz hech qayerga yuborilmaydi. To'lov, obuna, litsenziya kaliti yo'q. Mac versiyasi bilan <b>bir xil model</b> (rubaiSTT v2 medium) — aniqlik bir xil.</div>
+
+<h2>2. Talab</h2>
+<table><tr><th>Nima</th><th>Kerak</th></tr>
+<tr><td>Windows</td><td>10 yoki 11, 64-bit</td></tr>
+<tr><td>Operativ xotira</td><td>8 GB (model 1,2 GB oladi)</td></tr>
+<tr><td>Bo'sh joy</td><td>2 GB</td></tr>
+<tr><td>Mikrofon</td><td>noutbukniki yetarli; garnitura bo'lsa aniqroq</td></tr>
+<tr><td>Internet</td><td>faqat <b>o'rnatish paytida</b> (~850 MB yuklaydi), keyin kerak emas</td></tr>
+<tr><td>Admin huquqi</td><td>kerak emas — o'z papkangizga o'rnatiladi</td></tr></table>
+
+<h2>3. O'rnatish — bitta qadam</h2>
+<div class="step"><span class="num">1</span><div><b>RubaiSTT-Windows.zip</b> ni yuklab oching (o'ng tugma → «Extract All» / «Barchasini chiqarish»).</div></div>
+<div class="step"><span class="num">2</span><div>Ochilgan papkada <b>ORNATISH.bat</b> ni ikki marta bosing. Qora oyna ochiladi — <b>yopmang</b>. U o'zi: Python → whisper dvigateli → model (823 MB) → yorliqlarni o'rnatadi. 5–30 daqiqa (internetga qarab).</div></div>
+<div class="step"><span class="num">3</span><div>Windows «Noma'lum nashriyotchi / Windows protected your PC» desa — <b>«Batafsil» (More info) → «Baribir ishga tushirish» (Run anyway)</b>.</div></div>
+<div class="step"><span class="num">4</span><div>Oxirida «OK: O'RNATILDI» chiqadi va soat yonida <b>yashil mikrofon</b> belgisi paydo bo'ladi (10–40 soniya — model xotiraga yuklanadi).</div></div>
+<div class="box warn">Yuklash uzilib qolsa — <b>ORNATISH.bat ni yana bosing</b>: yuklangan qismi saqlanadi, qolganidan davom etadi.</div>
+
+<h2>4. Ishlatish</h2>
+<ol>
+<li>Kursorni yozish joyiga qo'ying (Notepad'da sinab ko'ring).</li>
+<li><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd> — qisqa «bip», belgi <b>qizil</b> bo'ladi: yozilmoqda.</li>
+<li>Gapiring — oddiy tezlikda, mikrofondan 20–30 sm.</li>
+<li>Yana <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd> — past «bip», belgi <b>sariq</b>: o'girilmoqda (2–6 soniya).</li>
+<li>Matn o'sha joyga yoziladi, belgi yana yashil.</li></ol>
+<table><tr><th>Belgi rangi</th><th>Ma'nosi</th></tr>
+<tr><td><span style="color:#2e7d32">●</span> yashil</td><td>tayyor — gapirishingiz mumkin</td></tr>
+<tr><td><span style="color:#d32f2f">●</span> qizil</td><td>yozib olyapti</td></tr>
+<tr><td><span style="color:#f9a825">●</span> sariq</td><td>matnga o'giryapti — kuting</td></tr></table>
+<p><b>Mikrofonni tanlash:</b> belgi ustida o'ng tugma → <b>Mikrofon</b> → kerakli qurilma. <b>Kompyuter yoqilganda</b> dastur o'zi ishga tushadi. Ish stolida ham «RubaiSTT» yorlig'i bor.</p>
+
+<h2>5. Ishlamasa</h2>
+<table><tr><th>Holat</th><th>Nima qilish</th></tr>
+<tr><td>Bip chiqadi, lekin matn chiqmaydi, «Mikrofon ochilmadi» xabari</td><td>Sozlamalar → Maxfiylik va xavfsizlik → Mikrofon → «Ilovalarga mikrofonga ruxsat» va «Ish stoli ilovalariga ruxsat» <b>YOQIQ</b> bo'lsin.</td></tr>
+<tr><td>Belgi umuman chiqmadi</td><td><code>%LOCALAPPDATA%\RubaiSTT\log.txt</code> ni oching (Win+R ga shu manzilni yozing) — oxirgi qatorda sabab. Ko'pincha model to'liq yuklanmagan → ORNATISH.bat qayta.</td></tr>
+<tr><td>«Hech narsa eshitilmadi»</td><td>Mikrofon boshqa qurilmaga ulangan — belgi → Mikrofon → to'g'risini tanlang.</td></tr>
+<tr><td>Sekin (10 soniya gapga 15+ soniya)</td><td>Kompyuter kuchsiz. Qisqaroq gapiring (5–15 soniyalik bo'laklar). NVIDIA videokartada 5–10 barobar tez ishlaydi (alohida so'rang).</td></tr>
+<tr><td>Matn 1C/SAP kabi eski dasturga qo'yilmadi</td><td>Matn clipboardda turadi — <kbd>Ctrl</kbd>+<kbd>V</kbd> bosing.</td></tr>
+<tr><td>Xato so'zlar</td><td>Aniq, oddiy tezlikda gapiring; shovqinli joyda garnitura ishlating. Model o'zbek adabiy tiliga o'qitilgan.</td></tr>
+<tr><td>Butunlay o'chirish</td><td><b>OCHIRISH.bat</b> — dastur, model va yorliqlarni o'chiradi.</td></tr></table>
+
+<h2>6. Ichkarida nima bor (qiziqqanlar uchun)</h2>
+<table><tr><th>Qism</th><th>Vazifasi</th><th>Litsenziya</th></tr>
+<tr><td>rubaiSTT v2 medium (q8_0, 823 MB)</td><td>O'zbek tili uchun maxsus o'qitilgan model (Sardor Islomov)</td><td>Apache 2.0</td></tr>
+<tr><td>whisper.cpp v1.9.2 (whisper-server.exe)</td><td>Modelni ishga tushiradi, xotirada ushlab turadi — shuning uchun tez</td><td>MIT</td></tr>
+<tr><td>Python 3.12 (embeddable) + pynput, sounddevice, pystray</td><td>Tugma, mikrofon, tray belgisi — faqat RubaiSTT papkasida, tizimga o'rnatilmaydi</td><td>PSF / MIT / LGPL</td></tr>
+<tr><td>rubaistt.py</td><td>Ilovaning o'zi: Ctrl+Alt+D → 16 kHz mono yozuv → model → clipboard + Ctrl+V</td><td>MIT</td></tr></table>
+<p>Hammasi <code>%LOCALAPPDATA%\RubaiSTT</code> papkasida. Manba kodi: <b>github.com/Komiljon006/uzbek-dictation</b> (papka <code>windows/</code>).</p>
+<div class="foot">RubaiSTT Dictation · Windows v1.1 · 14.09.2026 · Tijoratda cheklovsiz, nechta kompyuterga bo'lsa ham.</div>
+</body></html>
